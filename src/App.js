@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Routes, Route, useLocation} from "react-router-dom";
+import DashBoard from './pages/DashBoard/DashBoard';
+import Setting from './pages/Setting';
+import SettingAccount from './pages/SettingAccount';
+import Navbar from "./component/Navbar";
+import Sidebar from "./component/Sidebar";
+import DataStatistics from './pages/DataStatistics';
 function App() {
+  const location = useLocation();
+  const showSettingbar = location.pathname.startsWith("/Setting") || location.pathname === "/SettingAccount";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="layout-row">
+        <Sidebar />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<DashBoard />} /> 
+            <Route path="/Setting" element={<Setting/>}/>
+            <Route path="/SettingAccount" element={<SettingAccount/>}/>
+            <Route path="/DataStatistics" element={<DataStatistics/>}/>
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default App;
+
