@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import './Setting.css';
 import profileIcon from "../icons/lucide/profileIcon.svg";
 import Settingbar from "../component/Settingbar";
