@@ -1,3 +1,4 @@
+//경고 알림창 설정
 import { useEffect, useRef } from "react";
 import warning from "../icons/lucide/warning.png";
 

@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -29,7 +29,6 @@ function Graph({ data = [], title = "그래프 제목", label = "데이터 라�
             title: { display: true, text: title },
         },
     };
-
     const labels = data.map((d) => d.x);
     const chartData = {
         labels,
