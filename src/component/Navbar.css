@@ -13,11 +13,23 @@ box-sizing: border-box;
 .logo{
   color: #ffffff;
 font-family: 'Inter', Helvetica, Arial, sans-serif;
-font-size: 32px;
-font-weight: 400;
+font-size: 28px;
+font-weight: 50;
+margin-left: -27px;
+margin-top: 2px;
 letter-spacing: 0;
 line-height: normal;
 white-space: nowrap;
+}
+.logo-sub{
+  color: #ffffff;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
 }
 .right-icons {
   display: flex;
